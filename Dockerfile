@@ -5,6 +5,7 @@ RUN rm -rf /usr/share/nginx/html/*
 
 # Copy application files
 COPY index.html /usr/share/nginx/html/
+COPY company-logo.png /usr/share/nginx/images
 
 # Copy custom NGINX configuration
 # COPY nginx.conf /etc/nginx/conf.d/default.conf
