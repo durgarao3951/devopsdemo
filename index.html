@@ -1,119 +1,140 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Your YouTube Showcase</title>
-        <style>
-            header {
-                background-color: #ff0000; /* Customize with your channel's color */
-                color: #ffffff;
-                text-align: center;
-                padding: 2rem;
-            }
-            /* Reset some default styles */
-            body, h1, p {
-                margin: 0;
-                padding: 0;
-            }
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Portal</title>
 
-            /* Set a background color or image */
-            body {
-                background-color: #f5f5f5;
-                font-family: Arial, sans-serif;
-            }
+<style>
 
-            /* Center align content */
-            .container {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 2rem;
-                text-align: center;
-            }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
 
-            .video-container, .playlist-container, .shorts-container {
-                display: flex;
-                justify-content: center;
-                gap: 1rem;
-            }
+body{
+    background:#f0f4f8;
+}
 
-            .video, .playlist, .short {
-                flex: 1;
-                border: 1px solid #ddd;
-                padding: 1rem;
-                background-color: #ffffff;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
-            /* Footer section */
-            footer {
-                text-align: center;
-                padding: 1rem;
-                background-color: #333;
-                color: #ffffff;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>DheerajTechInsight</h1>
-            <p class="channel-description">Welcome to my channel!! Subscribe for awesome content.</p>
-        </header>
-        <div class="container">
-            <h1>Popular Videos</h1>
-            <br>
-            <!-- Popular YouTube Videos -->
-            <div class="video-container">
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/trFW03zP7Uw?si=9cXiME0hC3dwH6mi" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8CeaPSB3TMY?si=_qFWuKwqgmGLOar8" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/M1qVScFHj3A?si=e6YOrKymZVgYSsaO" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
+header{
+    background:#004080;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
 
-            <!-- Popular YouTube Playlists -->
-            <br>
-            <h1>Popular Playlists</h1>
-            <br>
-            <div class="playlist-container">
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=YLd39R6zYB6a7VuV&amp;list=PLz8JBMMd7yjWMJ0YeOkfnTohirAZT_pBU" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=pmR7Ep3IH_M1UkO7&amp;list=PLz8JBMMd7yjUukUG1M78ypP9GjWaP8rqf" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=m707kduCb5UYnUmV&amp;list=PLz8JBMMd7yjWA5qpXSVAcbi-_u9n6d7uw" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
+.container{
+    width:900px;
+    margin:40px auto;
+    display:flex;
+    justify-content:space-between;
+}
 
-            <!-- Popular YouTube Shorts -->
-            <br>
-            <h1>Popular Shorts</h1>
-            <br>
-            <div class="shorts-container">
-                <div class="short">
-                    <iframe width="315" height="560" src="https://youtube.com/embed/73toBt5R4zE?si=4iMebKKwOPyoUcYR" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="short">
-                    <iframe width="315" height="560" src="https://youtube.com/embed/L75o4sa7iXQ?si=tJv6_90r3CINw6uW" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="short">
-                    <iframe width="315" height="560" src="https://youtube.com/embed/LKysazmlDxk?si=MYycCA2N1tNzNoUH" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="short">
-                    <iframe width="315" height="560" src="https://youtube.com/embed/4OfEN3XGcic?si=10IE-7djtqcZuHnn" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="short">
-                    <iframe width="315" height="560" src="https://youtube.com/embed/AgGPGujpJCo?si=TVZ5CmamRWv5NPXa" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-        <footer>
-            © 2024 DheerajTechInsight | All rights reserved
-        </footer>
-    </body>
-    </html>
+.box{
+    width:420px;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+h2{
+    color:#004080;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#004080;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#0066cc;
+}
+
+footer{
+    margin-top:40px;
+    background:#004080;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>ABC Technologies Pvt Ltd</h1>
+<p>Employee Registration & Login Portal</p>
+</header>
+
+<div class="container">
+
+<div class="box">
+
+<h2>Employee Registration</h2>
+
+<form action="#">
+
+<input type="text" placeholder="Employee ID" required>
+
+<input type="text" placeholder="Employee Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Mobile Number" required>
+
+<input type="password" placeholder="Create Password" required>
+
+<button type="submit">Register</button>
+
+</form>
+
+</div>
+
+<div class="box">
+
+<h2>Employee Login</h2>
+
+<form action="#">
+
+<input type="text" placeholder="Employee ID" required>
+
+<input type="password" placeholder="Password" required>
+
+<button type="submit">Login</button>
+
+</form>
+
+</div>
+
+</div>
+
+<footer>
+
+Copyright © 2026 ABC Technologies Pvt Ltd
+
+</footer>
+
+</body>
+</html>
