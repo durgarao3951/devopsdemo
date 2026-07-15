@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>కోరాడ భాను గణేష్ & లక్ష్మి సరస్వతి — వివాహ ఆహ్వానం</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu:wght@500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;1,600&display=swap');
+
+  :root{
+    --parchment: #EEE3C6;
+    --parchment-deep: #E3D3A8;
+    --maroon: #7A1620;
+    --maroon-deep: #4A0E1B;
+    --gold: #C9962E;
+    --gold-deep: #9A6E1E;
+    --green: #2F5233;
+    --pink: #C23B6B;
+  }
+  *{ box-sizing:border-box; }
+  @media (prefers-reduced-motion: reduce){ *{ animation:none !important; } }
+
+  body{
+    margin:0;
+    padding:28px 12px;
+    min-height:100vh;
+    display:flex; align-items:center; justify-content:center;
+    background: linear-gradient(180deg, #2a1810, #1c100a);
+    font-family:'Noto Sans Telugu', sans-serif;
+  }
+
+  .poster{
+    position:relative;
+    width:100%;
+    max-width:460px;
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+    background:
+      radial-gradient(circle at 20% 10%, rgba(255,255,255,0.25), transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(0,0,0,0.06), transparent 40%),
+      repeating-radial-gradient(circle at 50% 50%, rgba(154,110,30,0.05) 0 2px, transparent 2px 6px),
+      linear-gradient(180deg, var(--parchment), var(--parchment-deep));
+    border: 2px solid var(--gold-deep);
+  }
+
+  /* ===== top marigold + rose garland ===== */
+  .garland{
+    position:relative;
+    height:70px;
+    background-image:
+      radial-gradient(circle at 10px 12px, #E4B93A 9px, transparent 10px),
+      radial-gradient(circle at 30px 12px, #C0272D 7px, transparent 8px),
+      radial-gradient(circle at 10px 30px, #F2CB5C 6px, transparent 7px),
+      radial-gradient(circle at 30px 30px, #E4B93A 5px, transparent 6px);
+    background-size: 40px 40px;
+    background-repeat: repeat-x;
+    border-bottom: 2px solid var(--gold-deep);
+  }
+  .garland::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:-9px; height:16px;
+    background-image: radial-gradient(ellipse at 20px 0, transparent 6px, var(--green) 7px, transparent 9px);
+    background-size: 40px 16px;
+    background-repeat: repeat-x;
+    opacity:0.9;
+  }
+
+  .side-band{
+    position:absolute; top:70px; bottom:56px; width:14px;
+    background:
+      repeating-linear-gradient(180deg, var(--gold) 0 10px, var(--gold-deep) 10px 12px);
+    opacity:0.9;
+  }
+  .side-band.left{ left:0; }
+  .side-band.right{ right:0; }
+
+  /* ===== bottom lotus border ===== */
+  .lotus-border{
+    position:relative;
+    height:56px;
+    background-image:
+      radial-gradient(circle at 20px 46px, var(--pink) 12px, transparent 13px),
+      radial-gradient(circle at 20px 46px, #E8709A 7px, transparent 8px),
+      radial-gradient(ellipse at 5px 46px, var(--pink) 8px, transparent 9px),
+      radial-gradient(ellipse at 35px 46px, var(--pink) 8px, transparent 9px);
+    background-size: 40px 56px;
+    background-repeat: repeat-x;
+    border-top: 2px solid var(--gold-deep);
+  }
+
+  .content{
+    position:relative;
+    text-align:center;
+    padding: 26px 34px 10px;
+  }
+
+  .medallion-wrap{ width:104px; height:104px; margin:0 auto 10px; position:relative; }
+  .sunburst{ position:absolute; inset:0; animation: spin 70s linear infinite; }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .medallion{
+    position:absolute; top:8px; left:8px; right:8px; bottom:8px; border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, #fff6e0, #f0d789 42%, var(--gold) 78%, var(--gold-deep));
+    box-shadow: inset 0 2px 4px rgba(255,255,255,0.65), inset 0 -6px 10px rgba(0,0,0,0.2), 0 6px 14px rgba(0,0,0,0.3);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .medallion svg{ width:66%; height:66%; }
+
+  .om-line{
+    font-family:'Noto Serif Telugu', serif;
+    color:var(--maroon-deep);
+    font-weight:700;
+    font-size:13.5px;
+    letter-spacing:0.06em;
+    margin: 4px 0 14px;
+  }
+
+  .title{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:600;
+    color: var(--maroon);
+    font-size: 34px;
+    margin: 0 0 6px;
+  }
+  .title-te{
+    font-family:'Noto Serif Telugu', serif;
+    font-weight:800;
+    color: var(--maroon);
+    font-size: 22px;
+    margin: 0 0 16px;
+  }
+
+  .intro-line{
+    font-size:13.5px;
+    color:#4a3d2c;
+    line-height:1.8;
+    max-width:320px;
+    margin: 0 auto 16px;
+  }
+
+  .names{
+    font-family:'Noto Serif Telugu', serif;
+    font-weight:800;
+    color: var(--maroon-deep);
+    font-size: 25px;
+    line-height:1.5;
+    margin: 4px 0 4px;
+  }
+  .amp{
+    display:block;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    color: var(--gold-deep);
+    font-size:19px;
+    margin:2px 0;
+  }
+
+  .groom-line{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+  }
+  .adv-icon{ width:20px; height:20px; flex-shrink:0; }
+  .groom-text{ position:relative; display:inline-block; }
+  .adv-label{
+    display:block;
+    font-family:'Noto Sans Telugu', sans-serif;
+    font-weight:600;
+    font-size:10.5px;
+    letter-spacing:0.06em;
+    color: var(--gold-deep);
+    margin-top:1px;
+  }
+
+  .divider{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    margin: 16px auto; width:64%;
+  }
+  .divider .l{ flex:1; height:1px; background:linear-gradient(90deg, transparent, var(--gold-deep), transparent); }
+  .divider .d{ width:6px; height:6px; background:var(--gold-deep); transform:rotate(45deg); }
+
+  .datebox{
+    display:inline-flex; align-items:center; gap:12px;
+    padding:9px 22px; border-radius:999px;
+    background: rgba(201,150,46,0.14);
+    border:1px solid rgba(201,150,46,0.5);
+    margin: 6px 0 20px;
+  }
+  .datebox span{
+    font-family:'Noto Serif Telugu', serif;
+    font-weight:700;
+    color:var(--maroon-deep);
+    font-size:14px;
+  }
+  .datebox .sep{ color:var(--gold-deep); }
+
+  .venue-label{
+    font-family:'Noto Serif Telugu', serif;
+    font-weight:700;
+    color:var(--green);
+    font-size:13px;
+    letter-spacing:0.05em;
+    margin-bottom:4px;
+  }
+  .venue{
+    font-family:'Noto Serif Telugu', serif;
+    font-weight:700;
+    color:var(--green);
+    font-size:18px;
+    line-height:1.5;
+    max-width:300px;
+    margin: 0 auto;
+  }
+  .venue-sub{
+    font-size:12px;
+    color:#6b6350;
+    margin-top:6px;
+  }
+
+  .qr-section{ margin-top:24px; }
+  .qr-ribbon{
+    display:inline-block;
+    font-family:'Noto Serif Telugu', serif;
+    font-weight:700;
+    font-size:12px;
+    color:#fff;
+    background: linear-gradient(135deg, var(--maroon), var(--maroon-deep));
+    padding:6px 18px;
+    border-radius:999px;
+    margin-bottom:12px;
+  }
+  .qr-frame{
+    display:inline-flex; flex-direction:column; align-items:center;
+    padding:14px; background:#fff; border-radius:10px;
+    border:1.5px solid rgba(201,150,46,0.5);
+    box-shadow: 0 8px 20px rgba(74,14,27,0.14);
+  }
+  #qrcode{ display:block; border-radius:6px; overflow:hidden; }
+  .qr-hint{ font-size:11px; color:#8a7a5f; margin-top:8px; }
+  .qr-link{
+    display:inline-block;
+    font-size:11.5px;
+    color: var(--maroon);
+    font-weight:600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    margin-top:6px;
+    word-break: break-all;
+  }
+  .qr-link:hover{ color: var(--maroon-deep); }
+
+  .contacts{ margin-top:22px; font-size:13px; color:#4a3d2c; }
+  .contacts .label{
+    font-family:'Noto Serif Telugu', serif;
+    font-weight:700; color:var(--maroon);
+    font-size:12px; margin-bottom:6px;
+  }
+  .contacts .nums{ font-weight:500; color:var(--maroon-deep); }
+</style>
+</head>
+<body>
+
+  <div class="poster">
+    <div class="garland"></div>
+    <div class="side-band left"></div>
+    <div class="side-band right"></div>
+
+    <div class="content">
+
+      <div class="medallion-wrap">
+        <svg class="sunburst" viewBox="0 0 104 104">
+          <g stroke="#C9962E" stroke-width="1.3" opacity="0.55">
+            <line x1="52" y1="2" x2="52" y2="12"/>
+            <line x1="52" y1="92" x2="52" y2="102"/>
+            <line x1="2" y1="52" x2="12" y2="52"/>
+            <line x1="92" y1="52" x2="102" y2="52"/>
+            <line x1="16" y1="16" x2="23" y2="23"/>
+            <line x1="81" y1="81" x2="88" y2="88"/>
+            <line x1="88" y1="16" x2="81" y2="23"/>
+            <line x1="23" y1="81" x2="16" y2="88"/>
+          </g>
+          <circle cx="52" cy="52" r="46" fill="none" stroke="#C9962E" stroke-width="1" opacity="0.4"/>
+        </svg>
+        <div class="medallion">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M60 8 L67 20 L60 17 L53 20 Z" fill="#4A0E1B"/>
+            <path d="M44 16 Q60 4 76 16 Q70 24 60 22 Q50 24 44 16 Z" fill="#4A0E1B"/>
+            <circle cx="60" cy="10" r="3" fill="#4A0E1B"/>
+            <path d="M28 46 Q14 46 16 64 Q18 78 34 74 Q26 62 28 46 Z" fill="#4A0E1B"/>
+            <path d="M92 46 Q106 46 104 64 Q102 78 86 74 Q94 62 92 46 Z" fill="#4A0E1B"/>
+            <path d="M34 40 Q34 20 60 20 Q86 20 86 40 Q86 58 76 64 Q78 72 70 74 L70 66 Q65 68 60 68 Q55 68 50 66 L50 74 Q42 72 44 64 Q34 58 34 40 Z" fill="#4A0E1B"/>
+            <path d="M52 62 Q50 78 60 84 Q68 88 64 96 Q60 102 52 98" stroke="#C9962E" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <circle cx="50" cy="46" r="3.2" fill="#C9962E"/>
+            <circle cx="70" cy="46" r="3.2" fill="#C9962E"/>
+            <path d="M62 66 L66 74 L60 72 Z" fill="#C9962E"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="om-line">|| ఓం శ్రీ గణేశాయ నమః ||</div>
+
+      <div class="title">Wedding Invitation</div>
+      <div class="title-te">వివాహ ఆహ్వానం</div>
+
+      <p class="intro-line">
+        మా కుటుంబాలతో కలిసి, మా వివాహ వేడుకలో పాల్గొని
+        మమ్మల్ని ఆశీర్వదించవలసిందిగా మిమ్మల్ని ఆహ్వానిస్తున్నాము
+      </p>
+
+      <div class="divider"><div class="l"></div><div class="d"></div><div class="l"></div></div>
+
+      <div class="names">
+        <span class="groom-line">
+          <svg class="adv-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="24" y1="6" x2="24" y2="34" stroke="#4A0E1B" stroke-width="2.4" stroke-linecap="round"/>
+            <line x1="10" y1="12" x2="38" y2="12" stroke="#4A0E1B" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M10 12 L4 24 Q10 30 16 24 Z" stroke="#C9962E" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+            <path d="M38 12 L32 24 Q38 30 44 24 Z" stroke="#C9962E" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+            <rect x="16" y="34" width="16" height="4" rx="1.5" fill="#4A0E1B"/>
+            <rect x="20" y="38" width="8" height="4" rx="1.5" fill="#4A0E1B"/>
+          </svg>
+          <span class="groom-text">కోరాడ భాను గణేష్<small class="adv-label">అడ్వకేట్</small></span>
+        </span>
+        <span class="amp">&amp;</span>
+        లక్ష్మి సరస్వతి
+      </div>
+
+      <div class="datebox">
+        <span>శుక్రవారం</span><span class="sep">✦</span><span>4 సెప్టెంబర్ 2026</span>
+      </div>
+
+      <div class="venue-label">వేదిక</div>
+      <div class="venue">గుజ్జల సరళ దేవి కళ్యాణ మండపం</div>
+      <div class="venue-sub">వేడుకలో పాల్గొనవలసిందిగా ఆహ్వానం</div>
+
+      <div class="qr-section">
+        <div class="qr-ribbon">వేదిక స్థానం కోసం స్కాన్ చేయండి</div>
+        <div class="qr-frame">
+          <div id="qrcode"></div>
+          <div class="qr-hint">గూగుల్ మ్యాప్స్‌లో తెరవడానికి నొక్కండి</div>
+          <a class="qr-link" href="https://maps.app.goo.gl/m2ewgrEeyj4VdFbm8" target="_blank" rel="noopener">maps.app.goo.gl/m2ewgrEeyj4VdFbm8</a>
+        </div>
+      </div>
+
+      <div class="contacts">
+        <div class="label">వివరాల కోసం</div>
+        <div class="nums">9581092555 &nbsp;/&nbsp; 9030111890</div>
+      </div>
+
+    </div>
+
+    <div class="lotus-border"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    new QRCode(document.getElementById("qrcode"), {
+      text: "https://maps.app.goo.gl/m2ewgrEeyj4VdFbm8",
+      width: 122,
+      height: 122,
+      colorDark: "#4A0E1B",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  </script>
+
+</body>
+</html>
