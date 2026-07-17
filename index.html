@@ -1,172 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
+const name = document.getElementById("name").value;
+const mobile = document.getElementById("mobile").value;
+const email = document.getElementById("email").value;
+const dept = document.getElementById("department").value;
 
-<title>Employee Registration</title>
+const message =
+`Hello Team,
 
-<style>
+New Employee Registration
 
-body{
-font-family:Arial;
-background:#f5f5f5;
-}
+Name: ${name}
+Mobile: ${mobile}
+Email: ${email}
+Department: ${dept}`;
 
-.container{
+const url =
+`https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
 
-width:450px;
-margin:auto;
-margin-top:40px;
-background:white;
-padding:25px;
-box-shadow:0 0 10px gray;
-
-}
-
-input{
-
-width:100%;
-padding:10px;
-margin:8px 0;
-
-}
-
-button{
-
-width:100%;
-padding:12px;
-background:green;
-color:white;
-border:none;
-
-}
-
-table{
-
-width:100%;
-margin-top:20px;
-border-collapse:collapse;
-
-}
-
-table,th,td{
-
-border:1px solid black;
-padding:8px;
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="container">
-
-<h2 align="center">Employee Registration</h2>
-
-<input type="text" id="name" placeholder="Employee Name">
-
-<input type="text" id="mobile" placeholder="Mobile Number">
-
-<input type="email" id="email" placeholder="Email Address">
-
-<button onclick="save()">Submit</button>
-
-<br><br>
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>Name</th>
-<th>Mobile</th>
-<th>Email</th>
-
-</tr>
-
-</thead>
-
-<tbody id="result">
-
-</tbody>
-
-</table>
-
-</div>
-
-<script>
-
-function save(){
-
-var name=document.getElementById("name").value;
-var mobile=document.getElementById("mobile").value;
-var email=document.getElementById("email").value;
-
-fetch("/api/employees",{
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-body:JSON.stringify({
-
-name:name,
-mobile:mobile,
-email:email
-
-})
-
-})
-
-.then(response=>response.json())
-
-.then(data=>{
-
-alert("Employee Registered Successfully");
-
-loadEmployees();
-
-});
-
-}
-
-function loadEmployees(){
-
-fetch("/api/employees")
-
-.then(response=>response.json())
-
-.then(data=>{
-
-let rows="";
-
-data.forEach(function(emp){
-
-rows+="<tr>";
-
-rows+="<td>"+emp.name+"</td>";
-rows+="<td>"+emp.mobile+"</td>";
-rows+="<td>"+emp.email+"</td>";
-
-rows+="</tr>";
-
-});
-
-document.getElementById("result").innerHTML=rows;
-
-});
-
-}
-
-loadEmployees();
-
-</script>
-
-</body>
-
-</html>
+window.location.href = url;
