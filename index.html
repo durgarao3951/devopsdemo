@@ -1,19 +1,29 @@
-const name = document.getElementById("name").value;
-const mobile = document.getElementById("mobile").value;
-const email = document.getElementById("email").value;
-const dept = document.getElementById("department").value;
+fetch("/api/employees/register", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(employee)
+})
+.then(res => res.json())
+.then(data => {
 
-const message =
-`Hello Team,
+    if(data.status === "SUCCESS"){
 
-New Employee Registration
+        let message =
+`Hello HR Team,
 
-Name: ${name}
-Mobile: ${mobile}
-Email: ${email}
-Department: ${dept}`;
+A new employee has registered.
 
-const url =
-`https://wa.me/919030111890?text=${encodeURIComponent(message)}`;
+Employee ID: ${data.employeeId}
+Name: ${employee.employeeName}
+Mobile: ${employee.mobile}
+Email: ${employee.email}
+Skills: ${employee.skills}`;
 
-window.location.href = url;
+        window.location.href =
+"https://wa.me/919030111890?text=" + encodeURIComponent(message);
+
+    }
+
+});
